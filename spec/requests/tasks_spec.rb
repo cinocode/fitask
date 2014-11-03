@@ -34,5 +34,11 @@ RSpec.describe "Tasks", :type => :request do
       click_button 'new_task_submit'
       expect(page).to have_content('Acquire world domination')
     end
+
+    it "should display an eror message for empty text" do
+      visit tasks_path
+      click_button 'new_task_submit'
+      expect(page).to have_content('Task text is mandatory')
+    end
   end
 end
