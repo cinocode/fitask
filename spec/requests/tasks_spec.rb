@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe "Tasks", :type => :request do
   describe "opening tasks index page" do
+    before(:each) do
+      @task = Task.create(:text => 'Write Jive blogpost about Ruby on Rails')
+    end
+
     it "should display headline" do
       visit tasks_path
       expect(page).to have_content('Fortis IT Task Manager')
