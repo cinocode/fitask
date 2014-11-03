@@ -1,3 +1,8 @@
+#newTaskForm
+  = form_tag tasks_path, :method => :post do
+    = text_field_tag 'new_task_text', '', id: 'new_task_text'
+    = submit_tag 'Add', id: 'new_task_submit'
+
 %ul#taskList
   - @tasks.each do |t|
     %li= t.text
