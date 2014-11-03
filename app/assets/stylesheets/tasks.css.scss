@@ -1,3 +1,20 @@
-// Place all the styles related to the tasks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+ul#taskList {
+	list-style-type: none;
+	padding: 2px;
+	background-color: darkseagreen;
+	border-top: 1px solid darkblue;
+	border-left: 1px solid darkblue;
+	border-right: 1px solid darkblue;
+	border-bottom: 1px solid darkblue;
+}
+
+ul#taskList li {
+	padding: 3px;
+	font-size: 18px;
+	font-weight: bold;
+	color: crimson;
+}
+
+ul#taskList li:not(:last-child) {
+	border-bottom: 1px dotted darkblue;
+}
