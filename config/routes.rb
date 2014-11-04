@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'tasks#index'
 
   resources :tasks
+  get '/complete/:id', to: 'tasks#complete', as: 'complete_task'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

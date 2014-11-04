@@ -46,7 +46,7 @@ RSpec.describe "Tasks", :type => :request do
 
     it "should not display the completed task" do
       visit tasks_path
-      click_button "task_check_#{@todo.id}"
+      find("a#task_check_#{@todo.id}").click
       expect(page).to_not have_content('Write Jive blogpost about Ruby on Rails')
     end
   end
