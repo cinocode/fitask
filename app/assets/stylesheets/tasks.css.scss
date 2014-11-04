@@ -30,3 +30,10 @@ div#newTaskForm input {
 div#newTaskForm input[type='submit']:hover {
   border: 1px solid crimson;
 }
+
+a[id^='task_check_'] {
+  color: crimson;
+  border: 1px solid darkblue;
+  font-size: 18px;
+  font-weight: bold;
+}

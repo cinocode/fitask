@@ -6,6 +6,6 @@
 %ul#taskList
   - @tasks.each do |t|
     %li
-      = link_to 'Done', complete_task_path(t), id: "task_check_#{t.id}"
+      = link_to '[_]', complete_task_path(t), id: "task_check_#{t.id}"
       = t.text
 
