@@ -8,5 +8,12 @@ div#outerBox {
 	margin-left: auto;
 	margin-right: auto;
 	border: 1px solid darkblue;
-	background-color: lightblue
+	background-color: lightblue;
+}
+
+div.errors {
+  padding: 3px;
+  border: 1px solid red;
+  color: red;
+  margin-bottom: 5px;
 }

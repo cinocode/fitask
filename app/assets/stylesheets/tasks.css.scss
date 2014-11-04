@@ -18,3 +18,15 @@ ul#taskList li {
 ul#taskList li:not(:last-child) {
 	border-bottom: 1px dotted darkblue;
 }
+div#newTaskForm input {
+  background-color: darkseagreen;
+  color: crimson;
+  border: 1px solid darkblue;
+  font-size: 18px;
+  font-weight: bold;
+  magin: 0px;
+}
+
+div#newTaskForm input[type='submit']:hover {
+  border: 1px solid crimson;
+}
