@@ -20,4 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      task:
+        text: "Task text"
+    errors:
+      models:
+        task:
+          attributes:
+            text:
+              blank: "is mandatory."
