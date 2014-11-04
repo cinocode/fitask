@@ -8,4 +8,7 @@
   %body
     #outerBox
       %h1 Fortis IT Task Manager
+      - if defined?(@errors)
+        - @errors.each do |msg|
+          %span= msg
       = yield

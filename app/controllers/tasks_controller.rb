@@ -5,10 +5,12 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(:text => params[:new_task_text])
-    if @task.save
+    if @task.valid? && @task.save
       redirect_to tasks_path
     else
-      redirect_to :back
+      @errors = @task.errors.full_messages
+      index()
+      render 'index'
     end
   end
 end
