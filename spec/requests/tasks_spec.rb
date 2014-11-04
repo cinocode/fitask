@@ -25,9 +25,6 @@ RSpec.describe "Tasks", :type => :request do
   end
 
   describe "creating a task" do
-    before(:each) do
-    end
-
     it "should display the new tasks text" do
       visit tasks_path
       fill_in 'new_task_text', :with => 'Acquire world domination'
@@ -39,6 +36,18 @@ RSpec.describe "Tasks", :type => :request do
       visit tasks_path
       click_button 'new_task_submit'
       expect(page).to have_content('Task text is mandatory')
+    end
+  end
+  
+  describe "completing a task" do
+    before(:each) do
+      @todo = Task.create(:text => 'Write Jive blogpost about Ruby on Rails')
+    end
+
+    it "should not display the completed task" do
+      visit tasks_path
+      click_button "task_check_#{@todo.id}"
+      expect(page).to_not have_content('Write Jive blogpost about Ruby on Rails')
     end
   end
 end
