@@ -1,28 +1,13 @@
-== README
+rails generate blogpost
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Im Namen der Verbreiterung meines Technologiespektrums durfte ich mich über die letzten Wochen in das Framework für Webanwendungen 'Ruby on Rails' einarbeiten. Zum einen über das Buch 'The Rails 4 Way' und zum anderen durch das Programmieren eines kleinen Testprojektes. Warum im Jahre 2021 alle anderen Programmiersprachen exterminiert sind und die Menschheit den Rails Generatoren Göttern dient, erfahrt ihr im Rest des Blogposts.
+ 
+In Rails sind viele Problemstellungen, die sich im Programmiereralltag ergeben, bereits elegant gelöst.
+Es sind standardmäßig 3 Environments angelegt - nur ein paar beispielhafte Vorteile: 'developement' arbeitet ohne Caching und zeigt einem Fehlermeldungen im Entwicklerformat, 'test' arbeitet mit einer Datenbank, die sich für jeden automatisierten Testlauf zurücksetzt, 'production' hält den Großteil des Codes im Speicher vor, um die Geschwindigkeit zu optimieren. Dies lässt sich alles anpassen, aber die Standardeinstellungen sind bereits sehr sinnig ('convention over configuration').
+'rails generate' legt Controller mit zugehörigen Views an oder baut einem Datenbankmigrationsskripte mit zugehörigen Models. Es wird einem viel Rüstzeit abgenommen und man kann gleich zum inhaltsbezogenen Programmieren übergehen.
+Hier ist es tatsächlich so, dass ich die meisten Dinge nur einmal tue. Ich erstelle ein Datenbankmigrationsskript mit einer neuen Spalte und meine Modelklasse wird automatisch angepasst. Sobald ich die Migration ausführe, bekomme ich automatisch eine Datei, die das komplette Schema enthält. In Java Applikationen bearbeite ich hier im Gegensatz 4 Dateien: Datenbankmigration, Gesamtdatenbankschema, Hibernate-Mapping und Modelklasse.
+RESTful zu arbeiten wird einfachst ermöglicht. Trägt man in der Routing Datei eine Zeile mit dem Inhalt 'resources :tasks', werden einem ganze sieben Routen angelegt. Ruft man dann z.B. '/tasks' auf wird im Taskscontroller die Methode index und im Anschluss die View names index.html aufgerufen. Ok wer jetzt nicht mitkommt, dem sei gesagt, dass dieser 2-Wort-Befehl einem Stunden an Arbeit, hunderte von Haaren und tausende von Nervenzellen retten kann.
+'test driven developement' wird stark empfohlen und ist unkompliziert einsetzbar
+Die 'rails console' gibt die Möglichkeit kurz Kleinigkeiten zu testen oder in die Entwicklungsdatenbank einzugreifen.
+Es lassen sich einfach Zusatzmodule installieren über sogenannte Gems. 'haml' ist eine gute Templating-Engine und 'rspec' funktioniert super zum Testen.
+Es ist ohne Konfiguration ein Rails Server und eine Sqlite 3 Datenbank eingerichtet, die man für die Entwicklung nutzen kann. Habe ich schon erwähnt, dass man direkt zum eigentlichen Programmieren kommt und nicht erstmal 2 Tage lang das ganze drumherum einrichtet?
